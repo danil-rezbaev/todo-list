@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import deleteIcon from './images/delete.svg'
-import editIcon from './images/Edit.svg'
-import saveIcon from './images/Save.svg'
+import editIcon from './images/edit.svg'
+import saveIcon from './images/save.svg'
 import styles from './index.module.scss'
 
 interface InputTaskProps {
