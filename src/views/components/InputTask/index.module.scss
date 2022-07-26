@@ -22,7 +22,7 @@
     margin-bottom: 0;
   }
 
-  &:hover {
+  &:hover, &.inputTaskEdit {
     background: #efefef66;
 
     .inputTaskControl {
@@ -31,9 +31,9 @@
     }
   }
 
-  &.inputTaskDone {
+  &.inputTaskDone, &.inputTaskRemove {
     &::after {
-      animation: progress 5s ease 0.01s;
+      animation: progress 2.5s ease 0.01s;
     }
 
     .inputTaskTitle {
@@ -49,8 +49,8 @@
   }
 
   &Title {
-    padding: 5px;
     line-height: 1.2;
+    word-break: break-word;
   }
 
   &Control {
@@ -63,6 +63,10 @@
 
     img {
       max-width: 90%;
+
+      @media screen and (max-width: 425px){
+        max-width: 100%;
+      }
     }
   }
 

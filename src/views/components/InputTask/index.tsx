@@ -23,6 +23,7 @@ export const InputTask: React.FC<InputTaskProps> = (props) => {
 
   const [check, setCheck] = useState(false)
   const [isEditMode, setIsEditMode] = useState(false)
+  const [remove, setRemove] = useState(false)
   const [editValue, setEditValue] = useState(title)
 
   const taskItemRef = useRef<HTMLDivElement>(null);
@@ -36,7 +37,8 @@ export const InputTask: React.FC<InputTaskProps> = (props) => {
 
   const callRemove = () => {
     if(confirm('Вы уверены?')) {
-      onRemoved(id)
+      setRemove(true)
+      setTimeout(() => onRemoved(id), 2500)
     }
   }
 
@@ -52,14 +54,18 @@ export const InputTask: React.FC<InputTaskProps> = (props) => {
 
   useEffect(() => {
     if (check) {
-      taskItemRef?.current?.classList.add('done')
-      setTimeout(() => onRemoved(id), 5000)
+      setTimeout(() => onRemoved(id), 2500)
     }
   }, [check])
 
   return (
     <div
-      className={`${styles.inputTask} ${check ? styles.inputTaskDone : ''}`}
+      className={`
+      ${styles.inputTask} 
+      ${isEditMode ? styles.inputTaskEdit : ''} 
+      ${remove ? styles.inputTaskRemove : ''}
+      ${check ? styles.inputTaskDone : ''}
+      `}
       ref={taskItemRef}
     >
       <div className={styles.inputTaskContainer}>

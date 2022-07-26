@@ -1,6 +1,6 @@
 .inputPlus {
   width: 80%;
-  min-width: 300px;
+  min-width: 200px;
   margin: 0 auto;
   border: 1.5px solid #efefef;
   border-radius: 15px;
@@ -50,5 +50,10 @@
     border: none;
     background: white;
     height: 30px;
+  }
+
+  @media screen and (max-width: 425px){
+    grid-template-columns: 1fr 35px;
+    width: 100%;
   }
 }
