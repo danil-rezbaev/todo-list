@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@400;500&display=swap');
+
+body {
+    font: 16px/1.4 'Roboto', sans-serif;
+    background: -webkit-linear-gradient(90deg,#ffffff,#cbf0ff,#93e3fd,#ffc5ab);
+    background: linear-gradient(90deg,#ffffff,#cbf0ff,#93e3fd,#ffc5ab);
+    box-sizing: border-box;
+}
+
+#root {
+    padding: 1rem;
+    min-height: calc(100vh - 1rem * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+}

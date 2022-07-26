@@ -1,0 +1,74 @@
+.inputTask {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 30px 30px;
+  align-items: center;
+  grid-gap: 2.5px;
+  margin-bottom: 0.5rem;
+  padding: 7.5px 5px;
+  transition: background .15s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: #5d87f242;
+    left: 0;
+    top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background: #efefef66;
+
+    .inputTaskControl {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &.inputTaskDone {
+    &::after {
+      animation: progress 5s ease 0.01s;
+    }
+
+    .inputTaskTitle {
+      text-decoration: line-through;
+    }
+  }
+
+  &Container {
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    align-items: center;
+    grid-gap: 15px;
+  }
+
+  &Title {
+    padding: 5px;
+    line-height: 1.2;
+  }
+
+  &Control {
+    display: block;
+    border: none;
+    background: transparent;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .25s ease .05s;
+
+    img {
+      max-width: 90%;
+    }
+  }
+
+  @keyframes progress {
+    to {
+      width: 100%;
+    }
+  }
+}

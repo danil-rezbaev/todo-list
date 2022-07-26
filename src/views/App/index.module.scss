@@ -1,0 +1,27 @@
+.article {
+  background: white;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  padding: 20px 55px 30px;
+
+  &Title {
+    color: #5d87f2;
+    font-size: 2.5rem;
+    margin-bottom: 0.3em;
+    text-align: center;
+  }
+
+  &EmptyHint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &Img {
+      display: block;
+      width: 25px;
+      height: 25px;
+      margin: 0 5px;
+    }
+  }
+}

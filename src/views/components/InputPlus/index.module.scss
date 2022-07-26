@@ -1,0 +1,54 @@
+.inputPlus {
+  width: 80%;
+  min-width: 300px;
+  margin: 0 auto;
+  border: 1.5px solid #efefef;
+  border-radius: 15px;
+  transition: border-color 0.15s;
+  display: grid;
+  grid-template-columns: 1fr 45px;
+  overflow: hidden;
+
+  &:focus-within {
+    border-color: #5d87f2;
+  }
+
+  &Value {
+    padding: 0 15px;
+    color: #0E0E0EFF;
+    cursor: text;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &::placeholder {
+      color: #a4a3a3;
+    }
+  }
+
+  &Button {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease 0.05s;
+  }
+
+  &ButtonActive {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &Icon {
+    width: 60%;
+  }
+
+  &Button, &Value {
+    border: none;
+    background: white;
+    height: 30px;
+  }
+}
