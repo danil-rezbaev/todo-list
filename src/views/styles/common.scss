@@ -5,6 +5,11 @@ body {
     background: -webkit-linear-gradient(90deg,#ffffff,#cbf0ff,#93e3fd,#ffc5ab);
     background: linear-gradient(90deg,#ffffff,#cbf0ff,#93e3fd,#ffc5ab);
     box-sizing: border-box;
+
+    @media screen and (max-width: 768px) {
+        background: -webkit-linear-gradient(90deg,#f2f8fa,#cbf0ff,#93e3fd,#ffc5ab);
+        background: linear-gradient(90deg,#f2f8fa,#cbf0ff,#93e3fd,#ffc5ab);
+    }
 }
 
 #root {
