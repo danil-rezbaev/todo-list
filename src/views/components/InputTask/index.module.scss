@@ -1,9 +1,9 @@
 .inputTask {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 30px 30px;
+  grid-template-columns: 1fr 25px 25px;
   align-items: center;
-  grid-gap: 2.5px;
+  grid-gap: 5px;
   margin-bottom: 0.5rem;
   padding: 7.5px 5px;
   transition: background .15s;
@@ -32,6 +32,7 @@
   }
 
   &.inputTaskDone, &.inputTaskRemove {
+
     &::after {
       animation: progress 2.5s ease 0.01s;
     }
@@ -60,10 +61,11 @@
     visibility: hidden;
     opacity: 0;
     transition: opacity .25s ease .05s;
+    padding: 0;
 
     img {
       max-width: 90%;
-      width: 100%;
+      width: 17.5px;
 
       @media screen and (max-width: 425px){
         max-width: 100%;
