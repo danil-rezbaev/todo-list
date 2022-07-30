@@ -1,6 +1,6 @@
 # To-do list
 
-> The good old task list that every frontend developer should have. But better!
+> The good old to-do list that every frontend developer should have. But better!
 
 **[> Live demo <](https://todo-list-alpha-ten.vercel.app/ "> view demo <")**
 
