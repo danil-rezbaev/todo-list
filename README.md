@@ -1,7 +1,8 @@
 # To-do list
 
 > The good old task list that every frontend developer should have. But better!
-**[:fa-share-square-o: Live demo](https://todo-list-alpha-ten.vercel.app/ "> view demo <")**
+
+**[> Live demo <](https://todo-list-alpha-ten.vercel.app/ "> view demo <")**
 
 ## How to use
 
